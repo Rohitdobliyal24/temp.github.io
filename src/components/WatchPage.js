@@ -45,7 +45,7 @@ const WatchPage = () => {
   const getVideoDetail = async () => {
     const response = await fetch(
       BASE_URL +
-        `/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=${process.env.REACT_APP_GOOGLE_API_KEY_9}`
+        `/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}&key=AIzaSyDen8XV1QsDSAu9BaEgyzG98ien34I1Zqk`
     );
     const data = await response.json();
     return data.items[0];

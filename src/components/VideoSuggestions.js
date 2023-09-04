@@ -8,7 +8,7 @@ const VideoSuggestions = ({ videoId, videoTitle }) => {
   const searchVideoByKeyword = async (searchText) => {
     const response = await fetch(
       BASE_URL +
-        `/search?part=snippet&maxResults=8&type=video&q=${searchText}&order=viewCount&videoDuration=medium&key=${process.env.REACT_APP_GOOGLE_API_KEY_5}`
+        `/search?part=snippet&maxResults=8&type=video&q=${searchText}&order=viewCount&videoDuration=medium&key=AIzaSyDen8XV1QsDSAu9BaEgyzG98ien34I1Zqk`
     );
     const data = await response.json();
     if (!response.ok) {
@@ -20,7 +20,7 @@ const VideoSuggestions = ({ videoId, videoTitle }) => {
   const getSuggestedVideos = async () => {
     const response = await fetch(
       BASE_URL +
-        `/search?part=snippet&relatedToVideoId=${videoId}&maxResults=15&type=video&key=${process.env.REACT_APP_GOOGLE_API_KEY_8}`
+        `/search?part=snippet&relatedToVideoId=${videoId}&maxResults=15&type=video&key=AIzaSyDen8XV1QsDSAu9BaEgyzG98ien34I1Zqk`
     );
     const data = await response.json();
     if (!response.ok) {

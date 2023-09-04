@@ -11,9 +11,7 @@ const Comments = ({ videoId, commentCount }) => {
   const getComments = async (nextPageToken = "") => {
     const response = await fetch(
       BASE_URL +
-        `/commentThreads?part=snippet%2Creplies&order=relevance&key=${
-          process.env.REACT_APP_GOOGLE_API_KEY_1
-        }&videoId=${videoId}&textFormat=plainText&pageToken=${
+        `/commentThreads?part=snippet%2Creplies&order=relevance&key=AIzaSyDen8XV1QsDSAu9BaEgyzG98ien34I1Zqk&videoId=${videoId}&textFormat=plainText&pageToken=${
           nextPageToken ?? ""
         }`
     );
